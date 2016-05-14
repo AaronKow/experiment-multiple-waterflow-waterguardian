@@ -84,8 +84,8 @@ void *get_water_sensor(void *arguments){
 			ml_total_3 += ml_3;
 
       		printf("Flow rate 1: %f L/min; Current Liquid Flowing: %d ml/sec; Output Liquid Quantity: %lu ml\n", flow_rate_1, ml_1, ml_total_1);
-      		printf("Flow rate 1: %f L/min; Current Liquid Flowing: %d ml/sec; Output Liquid Quantity: %lu ml\n", flow_rate_2, ml_2, ml_total_2);
-      		printf("Flow rate 1: %f L/min; Current Liquid Flowing: %d ml/sec; Output Liquid Quantity: %lu ml\n", flow_rate_3, ml_3, ml_total_3);
+      		printf("Flow rate 2: %f L/min; Current Liquid Flowing: %d ml/sec; Output Liquid Quantity: %lu ml\n", flow_rate_2, ml_2, ml_total_2);
+      		printf("Flow rate 3: %f L/min; Current Liquid Flowing: %d ml/sec; Output Liquid Quantity: %lu ml\n\n", flow_rate_3, ml_3, ml_total_3);
 
       		pulse_count_1 = 0; 														// Reset Counter
       		pulse_count_2 = 0; 														// Reset Counter
@@ -156,7 +156,7 @@ void *interrupt_func(void *arguments){
 		}
       
 		if (rc == 0) {															// if poll returns 0 then call timed out, loop again in this case
-			printf("Responding ...\n");
+			// printf("Responding ...\n");
 		}
             
 		if (fdset[1].revents & POLLPRI) {
