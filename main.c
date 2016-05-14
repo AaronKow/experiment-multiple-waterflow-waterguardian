@@ -53,9 +53,9 @@ void setup_pins(void){
 
 int main(int argc, char **argv, char **envp)
 {
-	if (argc < 2) {										// check for any arguments, if none, display messages
+	if (argc != 4) {										// check for any arguments, if none, display messages
 		printf("Error during execution:\n");
-		printf("Usage: water-sensor <gpio-pin>\n\n");
+		printf("USAGE: <filename> <gpio-pin> <gpio-pin> <gpio-pin>\n\n");
 		exit(-1);
 	} else {											// if received arguments, display message
 		printf("Program Started ... \nPlease press <enter> to exit this program.\n");
